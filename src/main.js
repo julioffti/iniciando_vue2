@@ -60,6 +60,10 @@ let meuVue = new Vue({
       let indexCasa = Math.floor(Math.random() * 20),
         indexFora = Math.floor(Math.random() * 20);
 
+        while( (indexFora == indexCasa)){
+            indexFora = Math.floor(Math.random() * 20);
+        }
+
       this.novoJogo.casa.time = this.times[indexCasa];
       this.novoJogo.casa.gols = 0;
       this.novoJogo.fora.time = this.times[indexFora];
